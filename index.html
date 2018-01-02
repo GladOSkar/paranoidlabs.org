@@ -3,36 +3,45 @@
 	<head>
 		<meta charset="utf-8" content="text/html" http-equiv="Content-Type">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>ParanoidLabs</title>
+		<title>paranoidlabs</title>
 		<style>
-			html {background: #333}
+			html {
+				background: #333
+			}
 			body {
 				font-family: sans-serif;
 				min-height: 100vh;
 				background: #444;
 				color: #ddd;
 				text-align: center;
-				max-width: 700px;
+				max-width: 840px;
 				margin: 0 auto;
+				padding: 42px 0;
 			}
 			header, footer, main {
 				padding: 10px 20px;
 			}
-			main{
+			header img {
+				width: 80%;
+				max-width: 200px;
+			}
+			main {
 				min-height: 75vh;
 			}
 			section {
 				margin: 16px;
 				padding: 16px;
 				display: inline-block;
-				max-width: 240px;
+				max-width: 260px;
 				background: #333
 			}
 			button {
+				font-family: sans-serif;
 				background: #333;
 				border: 0;
 				color: #ddd;
-				font: 16px bold;
+				font-size: 16px;
+				font-weight: bold;
 				padding: 12px;
 				margin: 42px 12px 12px;
 			}
@@ -40,13 +49,19 @@
 				background: #3a3a3a;
 				cursor: pointer;
 			}
-			a {color: #fff}
-			img {height: 1em}
+			a {
+				color: #fff;
+			}
+			button img {
+				height: 1.2em;
+				margin-bottom: -.2em;
+			}
 		</style>
 	</head>
 	<body>
 		<header>
-			<h1>ParanoidLabs</h1>
+			<img src="logo_bg.png">
+			<h1>paranoidlabs</h1>
 		</header>
 		<main>
 			<section>
@@ -65,11 +80,12 @@
 				<h3>How can i join?</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque in dignissimos quasi quam qui! Minus quam optio in impedit nam cum est aspernatur quas ullam, aut aliquid magni quisquam, velit.</p>
 			</section>
+			<br>
 			<button><img src="file.svg">&nbsp; Read the doc</button>
 			<button><img src="github-logo.svg">&nbsp; Visit us on GitHub</button>
 		</main>
 		<footer>
-			<h4> <a href="meta.html">Imprint &amp; Contact</a> </h4>
+			<a href="meta.html">Imprint &amp; Contact</a>
 		</footer>
 	</body>
 </html>
