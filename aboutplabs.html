@@ -11,35 +11,52 @@
 			<h1>About Paranoidlabs</h1>
 		</header>
 		<main>
-			<h2>Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P.</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duarum enim vitarum nobis erunt instituta capienda. Que Manilium, ab iisque M. Sint modo partes vitae beatae. Cur haec eadem Democritus? <b>Duo Reges: constructio interrete.</b> Refert tamen, quo modo. Istam voluptatem, inquit, Epicurus ignorat? Cur post Tarentum ad Archytam? Prodest, inquit, mihi eo esse animo. </p>
-			<p><code>Minime vero, inquit ille, consentit.</code> Qua tu etiam inprudens utebare non numquam. <a href='http://loripsum.net/' target='_blank'>Sed nimis multa.</a> Quis hoc dicit? Cave putes quicquam esse verius. Nam de isto magna dissensio est. </p>
+			<h2>What is Plabs?</h2>
+			<p>
+				What most people call "Plabs" is actually the "Plabs Network", a routed internet
+				based around an DMVPN-style encrypted on-demand meshing exchange network. 
+				Plabs *itself* is the loose group of nerds that keep that network running and
+				have fun (ab)using it.  But don't worry, even we call the Network "Plabs" because
+				we're just as lazy as the next guy.
+			</p>
+			<h3>Okay, but what does that mean in practice?</h3>
 			<ul>
-				<li>Universa enim illorum ratione cum tota vestra confligendum puto.</li>
-				<li>Amicitiae vero locus ubi esse potest aut quis amicus esse cuiquam, quem non ipsum amet propter ipsum?</li>
-				<li>Sic vester sapiens magno aliquo emolumento commotus cicuta, si opus erit, dimicabit.</li>
+				<li>
+					<p>
+						It's routed. That mostly means that we do not need to rely on NAT or similar. If
+						you are a client in Plabs you get an IPv4 address all to yourself and every
+						other IP in Plabs knows exactly how to get packets to you. This is really nice
+						because we can for example use SIP without terrible hacks and work-arounds or
+						can actually use UDP for *something* useful that's not a strict client-server
+						schema.
+					</p>
+				</li>
+				<li>
+					<p>
+						It's a (partial) mesh.  This way there is no single point of failure. If a hop on the path
+						you were using to get your packets to the destination goes offline the transient
+						routers can instantly start using a different path. The absolute worst-case
+						situation will result in less than 5 seconds of connectivity loss assuming there
+						is at least one path remaining to your destination.
+						It's not actually a mesh.  Normally in a mesh you need to explicitly set up
+						connections to each node.  Plabs uses a few trusted bootstrap servers (called
+						core-servers) that you register with.  These core servers establish trust with
+						each endpoint allowing any node to a) bootstrap a mesh using the list of other
+						registered nodes and b) establish trust to any node using a trust chain of a
+						maximum length of 2.
+					</p>
+				</li>
+				<li>
+					<p>
+						It's encrypted.  All the connection going over the open Internet are encrypted
+						using IPsec with some (hopefully) decent crypto.
+					</p>
+				</li>
 			</ul>
-			<p>Duo enim genera quae erant, fecit tria. Quae similitudo in genere etiam humano apparet. <code>Eademne, quae restincta siti?</code> Istam voluptatem, inquit, Epicurus ignorat? <code>At multis malis affectus.</code> </p>
-			<p>Sint ista Graecorum; <i>Perge porro;</i> <a href='http://loripsum.net/' target='_blank'>Quid de Pythagora?</a> Praeteritis, inquit, gaudeo. Immo alio genere; </p>
-			<blockquote cite='http://loripsum.net'>
-				Esse tantam vim virtutis tantamque, ut ita dicam, auctoritatem honestatis, ut reliqua non illa quidem nulla, sed ita parva sint, ut nulla esse videantur.
-			</blockquote>
-			<p>Teneo, inquit, finem illi videri nihil dolere. <b>Nam quid possumus facere melius?</b> <b>Quis istum dolorem timet?</b> Quis istud possit, inquit, negare? </p>
-			<h3>Mihi quidem Antiochum, quem audis, satis belle videris attendere.</h3>
-			<p>Cur haec eadem Democritus? <a href='http://loripsum.net/' target='_blank'>Sit sane ista voluptas.</a> <a href='http://loripsum.net/' target='_blank'>Sedulo, inquam, faciam.</a> Qui convenit? </p>
-			<pre>
-Natura igitur corpus quidem bominis sic et genuit et
-formavit, ut alia in primo ortu perficeret, alia
-progrediente aetate fingeret neque sane multum adiumentis
-externis et adventiciis uteretur.
-
-Minime vero probatur huic disciplinae, de qua loquor, aut
-iustitiam aut amicitiam propter utilitates adscisci aut
-probari.
-			</pre>
 		</main>
 		<footer>
-			<p>&copy; 2017 - 2018 _______</p>
+			<p>&copy; 2017 - 2018 Paranoidlabs</p>
+			<p>This page and its contents are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a> International License.</p>
 			<p><a href="meta.html">&raquo;&nbsp; Imprint &amp; Contact</a></p>
 		</footer>
 	</body>

@@ -17,7 +17,7 @@ header, footer, main {
 }
 main {
 	text-align: justify;
-	padding-bottom: 64px;
+	padding-bottom: 84px;
 }
 header img {
 	width: 80%;
@@ -89,7 +89,7 @@ button img {
 }
 footer {
 	position: absolute;
-	height: 64px;
+	height: 84px;
 	font-size: 12px;
 	color: #aaa;
 	margin: 0 auto;
